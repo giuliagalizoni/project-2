@@ -19,7 +19,7 @@ function Home() {
     <div className="container mt-5">
       <div className="row">
         {state.map((currentObj) => (
-          <div className="col col-4">
+          <div key={currentObj._id} className="col col-4">
             <div className="card mt-3" style={{ width: "18rem" }}>
               <img
                 src={currentObj.urlImage}
@@ -29,7 +29,10 @@ function Home() {
               <div className="card-body">
                 <h5 className="card-title">{currentObj.title}</h5>
                 <p className="card-text">{currentObj.place}</p>
-                <Link to="#" className="btn btn-primary">
+                <Link
+                  to={`/post/${currentObj._id}`}
+                  className="btn btn-primary"
+                >
                   See more
                 </Link>
               </div>
