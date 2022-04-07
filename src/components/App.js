@@ -8,20 +8,22 @@ import Friends from "../pages/Friends";
 import PostDetails from "../pages/PostDetails";
 import NewPost from "../pages/NewPost";
 import Error from "../pages/Error";
+import PostDelete from "../pages/PostDelete";
 
 function App() {
   return (
     <div>
-    <Navbar/>
-    <div className="container">
-    <Routes>
-      <Route path="/" element={<Home />}/>
-      <Route path="/friends" element={<Friends />}/>
-      <Route path="/post/:id" element={<PostDetails />}/>
-      <Route path="/new-post" element={<NewPost />}/>
-      <Route path="*" element={<Error />}/>
-    </Routes>
-    </div>
+      <Navbar />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/friends" element={<Friends />} />
+          <Route path="/post/:id" element={<PostDetails />} />
+          <Route path="/new-post" element={<NewPost />} />
+          <Route path="*" element={<Error />} />
+          <Route path="/delete-post/:id" element={<PostDelete />} />
+        </Routes>
+      </div>
     </div>
   );
 }

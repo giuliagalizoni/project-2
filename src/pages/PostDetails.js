@@ -9,6 +9,7 @@ function PostDetails() {
     rating: 0,
     description: "",
     urlImage: "",
+    id: "",
   });
 
   const { id } = useParams();
@@ -25,11 +26,14 @@ function PostDetails() {
       }
     }
     fetchData();
-    console.log(state);
-  }, [id]);
+    
+  }, [id, state]);
 
   return (
     <div className="container">
+      <Link className="btn btn-secondary ms-5" to={`/delete-post/${id}`}>
+        delete
+      </Link>
       <h1>{state.title}</h1>
       <img src={state.urlImage} alt={state.title} />
       <div>
