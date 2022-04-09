@@ -10,7 +10,6 @@ function NewPost() {
     rating: 0,
     description: "",
     urlImage: "",
-    id: "",
   });
   function handleChange(event) {
     setState({ ...state, [event.target.name]: event.target.value });
