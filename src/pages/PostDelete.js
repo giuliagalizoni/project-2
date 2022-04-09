@@ -11,7 +11,7 @@ function PostDelete() {
       "Você tem certeza que deseja deletar este post?"
     );
     if (really) {
-      return axios
+      axios
         .delete(`https://ironrest.herokuapp.com/Giulia-Junior-Wasthere/${id}`)
         .then((response) => {
           console.log(response.data);

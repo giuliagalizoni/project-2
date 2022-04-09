@@ -10,7 +10,6 @@ function EditPost() {
     rating: 0,
     description: "",
     urlImage: "",
-    id: "",
   });
   const navigate = useNavigate();
   const { id } = useParams();
@@ -37,8 +36,10 @@ function EditPost() {
   function handleSubmit(event) {
     event.preventDefault();
 
+    const data = { ...state };
+    delete data._id;
     axios
-      .patch("https://ironrest.herokuapp.com/Giulia-Junior-Wasthere/", state)
+      .put(`https://ironrest.herokuapp.com/Giulia-Junior-Wasthere/${id}`, data)
       .then((response) => {
         console.log(response.data);
         navigate("/");
