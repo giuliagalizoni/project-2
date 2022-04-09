@@ -1,9 +1,9 @@
 import axios from "axios";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import FormControl from "../forms/FormControl";
 
-function NewPost() {
+function EditPost() {
   const [state, setState] = useState({
     title: "",
     place: "",
@@ -12,15 +12,33 @@ function NewPost() {
     urlImage: "",
     id: "",
   });
+  const navigate = useNavigate();
+  const { id } = useParams();
+
+  useEffect(() => {
+    async function fetchPost() {
+      try {
+        const response = await axios.get(
+          `https://ironrest.herokuapp.com/Giulia-Junior-Wasthere/${id}`
+        );
+
+        setState({ ...response.data });
+      } catch (err) {
+        console.error(err);
+      }
+    }
+    fetchPost();
+  }, [id]);
+
   function handleChange(event) {
     setState({ ...state, [event.target.name]: event.target.value });
   }
-  const navigate = useNavigate();
+
   function handleSubmit(event) {
     event.preventDefault();
 
     axios
-      .post("https://ironrest.herokuapp.com/Giulia-Junior-Wasthere/", state)
+      .patch("https://ironrest.herokuapp.com/Giulia-Junior-Wasthere/", state)
       .then((response) => {
         console.log(response.data);
         navigate("/");
@@ -28,7 +46,7 @@ function NewPost() {
   }
   return (
     <div>
-      <h1>Novo Post</h1>
+      <h1>Edit Post</h1>
       <form onSubmit={handleSubmit}>
         <FormControl
           label="Title"
@@ -83,4 +101,4 @@ function NewPost() {
   );
 }
 
-export default NewPost;
+export default EditPost;

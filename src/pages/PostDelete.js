@@ -14,6 +14,7 @@ function PostDelete() {
       return axios
         .delete(`https://ironrest.herokuapp.com/Giulia-Junior-Wasthere/${id}`)
         .then((response) => {
+          console.log(response.data);
           navigate("/");
         })
         .catch((err) => console.error(err));
@@ -22,11 +23,7 @@ function PostDelete() {
     navigate(-1);
   }, [id, navigate]);
 
-  return (
-    <p>
-      Deletando...
-    </p>
-  );
+  return <p>Deletando...</p>;
 }
 
 export default PostDelete;

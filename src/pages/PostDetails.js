@@ -26,13 +26,15 @@ function PostDetails() {
       }
     }
     fetchData();
-    
   }, [id, state]);
 
   return (
     <div className="container">
       <Link className="btn btn-secondary ms-5" to={`/delete-post/${id}`}>
         delete
+      </Link>
+      <Link className="btn btn-secondary ms-5" to={`/edit-post/${id}`}>
+        edit
       </Link>
       <h1>{state.title}</h1>
       <img src={state.urlImage} alt={state.title} />
