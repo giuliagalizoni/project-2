@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-info">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           Wasthere
@@ -31,7 +31,11 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="btn btn-secondary ms-5" to="/new-post">
+              <Link
+                className="btn ms-5"
+                to="/new-post"
+                style={{ backgroundColor: "#fff", color: "#09a4c3" }}
+              >
                 Post
               </Link>
             </li>

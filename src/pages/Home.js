@@ -19,8 +19,11 @@ function Home() {
     <div className="container mt-5">
       <div className="row">
         {state.map((currentObj) => (
-          <div key={currentObj._id} className="col col-4">
-            <div className="card mt-3" style={{ width: "18rem" }}>
+          <div
+            key={currentObj._id}
+            className="col-12 col-sm-12 col-md-6 col-lg-3"
+          >
+            <div className="card mt-3" style={{ width: "100%" }}>
               <img
                 src={currentObj.urlImage}
                 className="card-img-top"
