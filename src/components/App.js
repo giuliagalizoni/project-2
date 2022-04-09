@@ -9,6 +9,7 @@ import PostDetails from "../pages/PostDetails";
 import NewPost from "../pages/NewPost";
 import Error from "../pages/Error";
 import PostDelete from "../pages/PostDelete";
+import EditPost from "../pages/EditPost";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/new-post" element={<NewPost />} />
           <Route path="*" element={<Error />} />
           <Route path="/delete-post/:id" element={<PostDelete />} />
+          <Route path="/edit-post/:id" element={<EditPost />} />
         </Routes>
       </div>
     </div>
