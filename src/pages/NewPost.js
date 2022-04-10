@@ -26,15 +26,17 @@ function NewPost() {
       });
   }
   return (
-    <div>
-      <h1>Novo Post</h1>
-      <form onSubmit={handleSubmit}>
+    <div className="container my-4 py-3 px-3 border rounded bg-white">
+      <h1 className="display-4">Create a new post</h1>
+      <p>Where have you been? Share your thoughts with the world! </p>
+      <form className="mt-3" onSubmit={handleSubmit}>
         <FormControl
           label="Title"
           id="newposttitle"
           name="title"
           onChange={handleChange}
           value={state.title}
+          placeholder="Amazing day at Winterfell!"
         />
 
         <FormControl
@@ -43,6 +45,7 @@ function NewPost() {
           name="place"
           onChange={handleChange}
           value={state.place}
+          placeholder="Westeros"
         />
 
         <FormControl
@@ -62,6 +65,7 @@ function NewPost() {
           name="urlImage"
           onChange={handleChange}
           value={state.urlImage}
+          placeholder="mypictureurl.com.br/my-pic"
         />
 
         <FormControl
@@ -70,10 +74,11 @@ function NewPost() {
           name="description"
           onChange={handleChange}
           value={state.description}
+          placeholder="I've been in Winterfell and it was..."
         />
 
-        <div className="mt-3">
-          <button type="submit" className="btn btn-primary">
+        <div className="mt-3 d-flex justify-content-end">
+          <button type="submit" className="btn text-light btn-info">
             Post
           </button>
         </div>

@@ -1,6 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import { Location } from "@carbon/icons-react";
+import { Edit } from "@carbon/icons-react";
+import { TrashCan } from "@carbon/icons-react";
+import BackBtn from "../components/BackBtn";
 
 function PostDetails() {
   const [state, setState] = useState({
@@ -29,23 +33,29 @@ function PostDetails() {
   }, [id, state]);
 
   return (
-    <div className="container mt-3 d-flex flex-column justify-content-center">
-      <div className="inline">
-        <Link className="btn btn-secondary ms-5" to={`/delete-post/${id}`}>
-          delete
-        </Link>
-        <Link className="btn btn-secondary ms-5" to={`/edit-post/${id}`}>
-          edit
-        </Link>
+    <div className="container container-fluid d-flex flex-column align-items-center mt-3 px-0">
+      <div className="container d-flex justify-content-between pe-0">
+        <BackBtn />
+        <div>
+          <Link className="btn btn-secondary" to={`/edit-post/${id}`}>
+            <Edit />
+          </Link>
+          <Link className="btn btn-danger ms-1" to={`/delete-post/${id}`}>
+            <TrashCan />
+          </Link>
+        </div>
       </div>
       <div
-        className="d-flex flex-column justify-content-center mt-2"
-        style={{ maxWidth: "500px" }}
+        className="d-flex flex-column justify-content-center my-2 px-3 border bg-white"
+        style={{ maxWidth: "600px" }}
       >
-        <h1>{state.title}</h1>
+        <h1 className="px-2 pt-3">{state.title}</h1>
         <img className="img-fluid" src={state.urlImage} alt={state.title} />
-        <div>
-          <small>{state.place}</small>
+        <div className="card-body">
+          <p>
+            <Location />
+            <small>{state.place}</small>
+          </p>
           <p>Rating: {state.rating}</p>
           <p>{state.description}</p>
         </div>

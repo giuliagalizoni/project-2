@@ -13,9 +13,9 @@ import EditPost from "../pages/EditPost";
 
 function App() {
   return (
-    <div>
+    <div className=" bg-light mt-0">
       <Navbar />
-      <div className="container">
+      <div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/friends" element={<Friends />} />
