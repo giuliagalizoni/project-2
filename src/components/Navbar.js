@@ -23,9 +23,9 @@ function Navbar() {
           // collapse navbar-collapse
           id="navbarNav"
         >
-          <ul className="navbar-nav">
+          <ul className="navbar-nav d-flex">
             {/* <li className="nav-item">
-              <Link className="nav-link" to="/">
+              <Link className="nav-link text-light" to="/">
                 Home
               </Link>
             </li> */}

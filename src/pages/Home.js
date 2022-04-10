@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Location } from "@carbon/icons-react";
 
 function Home() {
   const [state, setState] = useState([]);
@@ -31,7 +32,9 @@ function Home() {
               />
               <div className="card-body">
                 <h5 className="card-title">{currentObj.title}</h5>
-                <p className="card-text">{currentObj.place}</p>
+                <p className="card-text">
+                  <Location /> {currentObj.place}
+                </p>
                 <Link
                   to={`/post/${currentObj._id}`}
                   className="btn btn-info text-white"
