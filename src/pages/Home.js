@@ -16,7 +16,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-3">
       <div className="row">
         {state.map((currentObj) => (
           <div
@@ -34,7 +34,7 @@ function Home() {
                 <p className="card-text">{currentObj.place}</p>
                 <Link
                   to={`/post/${currentObj._id}`}
-                  className="btn btn-primary"
+                  className="btn btn-info text-white"
                 >
                   See more
                 </Link>
