@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Location } from "@carbon/icons-react";
+import LikeBtn from "../components/LikeBtn";
 
 function Home() {
   const [state, setState] = useState([]);
@@ -35,12 +36,15 @@ function Home() {
                 <p className="card-text">
                   <Location /> {currentObj.place}
                 </p>
-                <Link
-                  to={`/post/${currentObj._id}`}
-                  className="btn btn-info text-white"
-                >
-                  See more
-                </Link>
+                <div className="d-flex justify-content-between">
+                  <Link
+                    to={`/post/${currentObj._id}`}
+                    className="btn btn-info text-white"
+                  >
+                    See more
+                  </Link>
+                  <LikeBtn />
+                </div>
               </div>
             </div>
           </div>

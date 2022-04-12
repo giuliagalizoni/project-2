@@ -6,6 +6,7 @@ import { Edit } from "@carbon/icons-react";
 import { TrashCan } from "@carbon/icons-react";
 import BackBtn from "../components/BackBtn";
 import Rating from "../components/Rating";
+import LikeBtn from "../components/LikeBtn";
 
 function PostDetails() {
   const [state, setState] = useState({
@@ -60,6 +61,7 @@ function PostDetails() {
           <Rating>{state.rating}</Rating>
           {/* <p>Rating: {state.rating}</p> */}
           <p>{state.description}</p>
+          <LikeBtn />
         </div>
       </div>
     </div>
