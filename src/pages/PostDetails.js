@@ -5,6 +5,7 @@ import { Location } from "@carbon/icons-react";
 import { Edit } from "@carbon/icons-react";
 import { TrashCan } from "@carbon/icons-react";
 import BackBtn from "../components/BackBtn";
+import Rating from "../components/Rating";
 
 function PostDetails() {
   const [state, setState] = useState({
@@ -56,7 +57,8 @@ function PostDetails() {
             <Location />
             <small>{state.place}</small>
           </p>
-          <p>Rating: {state.rating}</p>
+          <Rating>{state.rating}</Rating>
+          {/* <p>Rating: {state.rating}</p> */}
           <p>{state.description}</p>
         </div>
       </div>
