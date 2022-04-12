@@ -36,32 +36,41 @@ function PostDetails() {
 
   return (
     <div className="container container-fluid d-flex flex-column align-items-center mt-3 px-0">
-      <div className="container d-flex justify-content-between pe-0">
+      <div className="container d-flex justify-content-between p-0">
         <BackBtn />
         <div>
           <Link className="btn btn-secondary" to={`/edit-post/${id}`}>
             <Edit />
           </Link>
-          <Link className="btn btn-danger ms-1" to={`/delete-post/${id}`}>
+          <Link className="btn btn-danger mx-1" to={`/delete-post/${id}`}>
             <TrashCan />
           </Link>
         </div>
       </div>
       <div
-        className="d-flex flex-column justify-content-center my-2 px-3 border bg-white"
-        style={{ maxWidth: "600px" }}
+        className="d-flex flex-column flex-sm-column flex-md-column flex-lg-row justify-content-center my-2 px-3 border bg-white"
+        // style={{ maxWidth: "600px" }}
       >
-        <h1 className="px-2 pt-3">{state.title}</h1>
-        <img className="img-fluid" src={state.urlImage} alt={state.title} />
-        <div className="card-body">
-          <p>
-            <Location />
-            <small>{state.place}</small>
-          </p>
-          <Rating>{state.rating}</Rating>
-          {/* <p>Rating: {state.rating}</p> */}
-          <p>{state.description}</p>
-          <LikeBtn />
+        <img
+          className="card-img-top img-fluid my-3"
+          src={state.urlImage}
+          alt={state.title}
+          style={{ maxWidth: "500px", maxHeight: "500px", objectFit: "cover" }}
+        />
+        <div className="card-body d-flex flex-column justify-content-between">
+          <div>
+            <h1 className="">{state.title}</h1>
+            <p>
+              <Location />
+              <small>{state.place}</small>
+            </p>
+            <Rating>{state.rating}</Rating>
+            {/* <p>Rating: {state.rating}</p> */}
+            <p>{state.description}</p>
+          </div>
+          <div className="align-self-end">
+            <LikeBtn />
+          </div>
         </div>
       </div>
     </div>
