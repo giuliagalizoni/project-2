@@ -23,19 +23,25 @@ function Home() {
         {state.map((currentObj) => (
           <div
             key={currentObj._id}
-            className="col-12 col-sm-12 col-md-6 col-lg-3"
+            className="col-12 col-sm-12 col-md-6 col-lg-3 mt-2"
           >
-            <div className="card mt-3" style={{ width: "100%" }}>
+            <div
+              className="card mt-3"
+              style={{ width: "100%", height: "100%" }}
+            >
               <img
                 src={currentObj.urlImage}
                 className="card-img-top"
                 alt={currentObj.title}
+                style={{ height: "300px", objectFit: "cover" }}
               />
-              <div className="card-body">
-                <h5 className="card-title">{currentObj.title}</h5>
-                <p className="card-text">
-                  <Location /> {currentObj.place}
-                </p>
+              <div className="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h5 className="card-title">{currentObj.title}</h5>
+                  <p className="card-text">
+                    <Location /> {currentObj.place}
+                  </p>
+                </div>
                 <div className="d-flex justify-content-between">
                   <Link
                     to={`/post/${currentObj._id}`}

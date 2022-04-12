@@ -13,7 +13,7 @@ function LikeBtn() {
     }
   }
   return (
-    <div className="btn btn-info text-white mx-1" onClick={handleClick}>
+    <div className="btn btn-info text-white me-1" onClick={handleClick}>
       {liked ? <FavoriteFilled /> : <Favorite />}
     </div>
   );
