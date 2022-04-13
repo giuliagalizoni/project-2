@@ -1,5 +1,4 @@
 import { ArrowLeft } from "@carbon/icons-react";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function BackBtn() {

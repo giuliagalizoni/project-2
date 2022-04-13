@@ -10,6 +10,7 @@ import NewPost from "../pages/NewPost";
 import Error from "../pages/Error";
 import PostDelete from "../pages/PostDelete";
 import EditPost from "../pages/EditPost";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/edit-post/:id" element={<EditPost />} />
         </Routes>
       </div>
+       <Footer />
     </div>
   );
 }

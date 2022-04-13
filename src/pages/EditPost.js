@@ -11,6 +11,7 @@ function EditPost() {
     rating: 0,
     description: "",
     urlImage: "",
+    like: false
   });
   const navigate = useNavigate();
   const { id } = useParams();
@@ -42,7 +43,6 @@ function EditPost() {
     axios
       .put(`https://ironrest.herokuapp.com/Giulia-Junior-Wasthere/${id}`, data)
       .then((response) => {
-        console.log(response.data);
         navigate("/");
       });
   }
