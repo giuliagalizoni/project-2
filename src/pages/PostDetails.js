@@ -15,7 +15,7 @@ function PostDetails() {
     rating: 0,
     description: "",
     urlImage: "",
-    id: "",
+    like: false
   });
 
   const { id } = useParams();
@@ -32,7 +32,7 @@ function PostDetails() {
       }
     }
     fetchData();
-  }, [id, state]);
+  }, [id]);
 
   return (
     <div className="container container-fluid d-flex flex-column align-items-center mt-3 px-0">
@@ -69,7 +69,7 @@ function PostDetails() {
             <p>{state.description}</p>
           </div>
           <div className="align-self-end">
-            <LikeBtn />
+          <LikeBtn id={id} state={state} />
           </div>
         </div>
       </div>

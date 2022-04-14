@@ -10,7 +10,8 @@ function Home() {
     axios
       .get("https://ironrest.herokuapp.com/Giulia-Junior-Wasthere")
       .then((response) => {
-        setState([...response.data]);
+        const responseInvert = response.data.reverse();
+        setState([...responseInvert]);
       })
       .catch((err) => {
         console.error(err);
@@ -49,7 +50,7 @@ function Home() {
                   >
                     See more
                   </Link>
-                  <LikeBtn />
+                  <LikeBtn id={currentObj._id} state={currentObj} />
                 </div>
               </div>
             </div>
