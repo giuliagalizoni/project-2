@@ -7,6 +7,7 @@ import { TrashCan } from "@carbon/icons-react";
 import BackBtn from "../components/BackBtn";
 import Rating from "../components/Rating";
 import LikeBtn from "../components/LikeBtn";
+import NewComment from "../components/NewComment";
 
 function PostDetails() {
   const [state, setState] = useState({
@@ -15,7 +16,7 @@ function PostDetails() {
     rating: 0,
     description: "",
     urlImage: "",
-    like: false
+    like: false,
   });
 
   const { id } = useParams();
@@ -69,10 +70,11 @@ function PostDetails() {
             <p>{state.description}</p>
           </div>
           <div className="align-self-end">
-          <LikeBtn id={id} state={state} />
+            <LikeBtn id={id} state={state} />
           </div>
         </div>
       </div>
+      <NewComment postId={id} />
     </div>
   );
 }
