@@ -1,9 +1,10 @@
 function FormControl(props) {
-    return (
-      <div className="mb-3">
-        <label htmlFor={props.id} className="form-label">
-          {props.label}
-        </label>
+  return (
+    <div className="form-group row mb-3">
+      <label htmlFor={props.id} className="col-sm-2 col-form-label">
+        {props.label}
+      </label>
+      <div className="col-sm-10">
         <input
           id={props.id}
           className="form-control"
@@ -13,10 +14,11 @@ function FormControl(props) {
           onChange={props.onChange}
           min={props.min}
           max={props.max}
+          placeholder={props.placeholder}
         />
       </div>
-    );
-  }
-  
-  export default FormControl;
-  
+    </div>
+  );
+}
+
+export default FormControl;

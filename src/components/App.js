@@ -10,12 +10,13 @@ import NewPost from "../pages/NewPost";
 import Error from "../pages/Error";
 import PostDelete from "../pages/PostDelete";
 import EditPost from "../pages/EditPost";
+import Footer from "./Footer";
 
 function App() {
   return (
-    <div>
+    <div className=" bg-light mt-0">
       <Navbar />
-      <div className="container">
+      <div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/friends" element={<Friends />} />
@@ -26,6 +27,7 @@ function App() {
           <Route path="/edit-post/:id" element={<EditPost />} />
         </Routes>
       </div>
+       <Footer />
     </div>
   );
 }
