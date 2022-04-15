@@ -8,7 +8,7 @@ function ListComment(props) {
 
   function handleClick(id) {
     const really = window.confirm(
-      "Você tem certeza que deseja deletar este comentário?"
+      "Are you sure you want to delete this comment?"
     );
     if (really) {
       setCommentId(id);
