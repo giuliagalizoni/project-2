@@ -7,9 +7,7 @@ function PostDelete() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const really = window.confirm(
-      "Você tem certeza que deseja deletar este post?"
-    );
+    const really = window.confirm("Are you sure you want to delete this post?");
     if (really) {
       axios
         .delete(`https://ironrest.herokuapp.com/Giulia-Junior-Wasthere/${id}`)

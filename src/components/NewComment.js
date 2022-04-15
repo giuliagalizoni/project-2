@@ -1,7 +1,6 @@
 import { AddComment } from "@carbon/icons-react";
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
 function NewComment(props) {
   const [state, setState] = useState({
