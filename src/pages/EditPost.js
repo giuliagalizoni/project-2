@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import FormControl from "../forms/FormControl";
 import BackBtn from "../components/BackBtn";
+import TextAreaControl from "../forms/TextAreaControl";
 
 function EditPost() {
   const [state, setState] = useState({
@@ -11,7 +12,7 @@ function EditPost() {
     rating: 0,
     description: "",
     urlImage: "",
-    like: false
+    like: false,
   });
   const navigate = useNavigate();
   const { id } = useParams();
@@ -87,7 +88,7 @@ function EditPost() {
             value={state.urlImage}
           />
 
-          <FormControl
+          <TextAreaControl
             label="Description"
             id="newpostdescription"
             name="description"

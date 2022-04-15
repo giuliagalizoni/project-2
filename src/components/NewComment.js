@@ -9,8 +9,6 @@ function NewComment(props) {
     postId: props.postId,
   });
 
-  const navigate = useNavigate();
-  console.log(state);
   function handleChange(event) {
     setState({ ...state, [event.target.name]: event.target.value });
   }
@@ -24,6 +22,7 @@ function NewComment(props) {
         state
       )
       .then((response) => {
+        window.location.reload();
         console.log(response.data);
       });
   }
