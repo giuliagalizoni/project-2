@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FormControl from "../forms/FormControl";
 import BackBtn from "../components/BackBtn";
+import TextAreaControl from "../forms/TextAreaControl";
 
 function NewPost() {
   const [state, setState] = useState({
@@ -72,7 +73,7 @@ function NewPost() {
             placeholder="mypictureurl.com.br/my-pic"
           />
 
-          <FormControl
+          <TextAreaControl
             label="Description"
             id="newpostdescription"
             name="description"

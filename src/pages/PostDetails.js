@@ -8,6 +8,7 @@ import BackBtn from "../components/BackBtn";
 import Rating from "../components/Rating";
 import LikeBtn from "../components/LikeBtn";
 import NewComment from "../components/NewComment";
+import ListComment from "../components/ListComment";
 
 function PostDetails() {
   const [state, setState] = useState({
@@ -17,7 +18,7 @@ function PostDetails() {
     description: "",
     urlImage: "",
     like: false,
-  });
+      });
 
   const { id } = useParams();
 
@@ -75,6 +76,7 @@ function PostDetails() {
         </div>
       </div>
       <NewComment postId={id} />
+      <ListComment postId={id} />
     </div>
   );
 }
