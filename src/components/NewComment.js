@@ -26,7 +26,7 @@ function NewComment(props) {
       });
   }
   return (
-    <form className="input-group mb-3" onSubmit={handleSubmit}>
+    <form className="input-group mb-3 mx-1 px-1" onSubmit={handleSubmit}>
       <input
         className="form-control"
         id="newcomment"
