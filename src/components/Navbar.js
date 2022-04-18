@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-info">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-info sticky-top">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           Wasthere

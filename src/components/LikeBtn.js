@@ -49,7 +49,7 @@ function LikeBtn(props) {
   }, [props.state.like]);
 
   return (
-    <div className="btn btn-info text-white me-1" onClick={handleClick}>
+    <div className="btn btn-info text-white" onClick={handleClick}>
       {liked ? <FavoriteFilled /> : <Favorite />}
     </div>
   );

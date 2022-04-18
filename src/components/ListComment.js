@@ -45,16 +45,17 @@ function ListComment(props) {
   }, [commentId]);
 
   return (
-    <div style={{ width: "100%" }}>
+    <div className="mx-1 px-1" style={{ width: "100%" }}>
       <ul className="list-group">
         {filterArr.map((currentObj) => (
           <li
-            className="list-group-item d-flex justify-content-between "
+            className="list-group-item d-flex justify-content-between p-0"
             key={currentObj._id}
           >
-            <p>{currentObj.comment}</p>
+            <p className="p-1 m-1">{currentObj.comment}</p>
             <button
-              className="btn btn-outline-danger mx-1"
+              className="btn btn-outline-danger "
+              style={{ border: "none", width: "42px", height: "40px" }}
               onClick={() => handleClick(currentObj._id)}
             >
               <TrashCan />
