@@ -4,7 +4,8 @@ function Footer() {
       className="mt-5 px-3 py-3 bg-info "
       style={{ color: "#fff", height: "100%", fontSize: "0.7rem" }}
     >
-      This app was developed at IronHack FullStack Web Development bootcamp by{" "}
+      This app was developed for educational purposes at IronHack FullStack Web
+      Development bootcamp by{" "}
       <a
         href="https://www.linkedin.com/in/giulia-galizoni-caversan-84b481112?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BsziwYW%2BDSuOlbSTM77qwKA%3D%3D"
         target="_blank"

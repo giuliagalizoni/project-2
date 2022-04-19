@@ -44,7 +44,7 @@ function EditPost() {
     axios
       .put(`https://ironrest.herokuapp.com/Giulia-Junior-Wasthere/${id}`, data)
       .then((response) => {
-        navigate("/");
+        navigate(-1);
       });
   }
   return (
